@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/moviesRelLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/txtMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Movies: "
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/cbHarry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtMovies"
+            android:text="Harry Potter" />
+
+        <CheckBox
+            android:id="@+id/cbMission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtMovies"
+            android:layout_toRightOf="@+id/cbHarry"
+            android:text="Mission Impossible" />
+
+        <CheckBox
+            android:id="@+id/cbMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtMovies"
+            android:layout_toRightOf="@+id/cbMission"
+            android:text="The Matrix" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/maritalRelLayout"
+        android:layout_below="@+id/moviesRelLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marital Status"
+            android:textSize="20sp"
+            android:id="@+id/txtMarital"
+            />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgMarital"
+            android:layout_below="@+id/txtMarital"
+            >
+
+            <RadioButton
+                android:id="@+id/rbMarried"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Married"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rbSingle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Single"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rbLiveIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live In"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/maritalRelLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginRight="15dp"
+        android:max="100" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="128dp"
+        android:layout_height="121dp"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar"
+        android:layout_alignEnd="@+id/progressBar"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="127dp"
+        android:src="@drawable/ic_flight_mode" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvTextView"
+        android:layout_below="@+id/imageView"
+        android:text="Cities ListView: "
+        android:textSize="20sp"
+        android:textStyle="italic|bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+<!--    <ListView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_below="@+id/lvTextView"-->
+<!--        android:id="@+id/listView"-->
+<!--        />-->
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lvTextView"
+        android:layout_marginTop="20dp"
+        android:id="@+id/spinner"
+        android:entries="@array/students"
+        tools:ignore="ExtraText" />
+</RelativeLayout>

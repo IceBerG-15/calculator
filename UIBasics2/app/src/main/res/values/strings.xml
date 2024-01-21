@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UI Basics 2</string>
+    <string-array name="students">
+        <item>Mehul</item>
+        <item>Rohit</item>
+        <item>Ram</item>
+    </string-array>
+</resources>
