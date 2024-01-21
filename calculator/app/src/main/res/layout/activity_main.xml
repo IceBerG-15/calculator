@@ -87,4 +87,15 @@
         app:layout_constraintStart_toStartOf="@+id/add"
         app:layout_constraintTop_toBottomOf="@+id/add" />
 
+    <Button
+        android:id="@+id/mod"
+        android:layout_width="100dp"
+        android:layout_height="62dp"
+        android:text="%"
+        android:textSize="40sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiply" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private EditText number_1,number_2,result;
-    private Button add,minus,divide,multiply;
+    private Button add,minus,divide,multiply,mod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         minus = findViewById(R.id.minus);
         divide = findViewById(R.id.divide);
         multiply = findViewById(R.id.multiply);
+        mod = findViewById(R.id.mod);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +80,21 @@ public class MainActivity extends AppCompatActivity {
                     x = Float.parseFloat(number_1.getText().toString());
                     y = Float.parseFloat(number_2.getText().toString());
                     s = x/y;
+                    result.setText(Float.toString(s));
+                }catch (NumberFormatException e){
+                    Toast.makeText(MainActivity.this, "enter number instead of string!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        mod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    float x , y , s;
+                    x = Float.parseFloat(number_1.getText().toString());
+                    y = Float.parseFloat(number_2.getText().toString());
+                    s = x%y;
                     result.setText(Float.toString(s));
                 }catch (NumberFormatException e){
                     Toast.makeText(MainActivity.this, "enter number instead of string!!", Toast.LENGTH_SHORT).show();
