@@ -1,1 +1,2 @@
 ### CALCULATOR APPLICATION USING ANDROID STUDIO
+<code><img src = 'IMAGE.png' > </code>
